@@ -1,4 +1,3 @@
-from pydoc import text
 from turtle import Turtle
 
 
@@ -14,6 +13,10 @@ class ScoreBoard(Turtle):
 
     def update_scoreboard(self):
         self.write(f"Score: {self.score}", align="center", font=("Arial", 24, "normal"))
+
+    def game_over(self):
+        self.goto(0, 0)
+        self.write("GAME OVER", align="center", font=("Arial", 24, "normal"))
 
     def increase_score(self):
         self.score += 1
