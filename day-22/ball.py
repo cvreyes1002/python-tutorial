@@ -9,6 +9,7 @@ class Ball:
         self.ball.penup()
         self.x_move = 10
         self.y_move = 10
+        self.ball_speed = 0.1
 
     #        selfball..paddle.shapesize(stretch_wid=5, stretch_len=1)
     #        self.ball.goto()
@@ -22,3 +23,10 @@ class Ball:
 
     def bounce_x(self):
         self.x_move *= -1
+        self.ball_speed *= 0.9
+
+    def reset_position(self):
+        self.ball.goto(0,0)
+        self.ball.speed = 0.1
+        self.bounce_x()
+
