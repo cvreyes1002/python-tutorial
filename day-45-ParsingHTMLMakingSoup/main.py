@@ -23,3 +23,13 @@ print(section_heading)
 print(section_heading.getText())
 print(section_heading.name)
 
+company_url = soup.select_one(selector="p a")
+print(company_url)
+
+# Using id
+name = soup.select_one(selector="#name")
+print(name)
+
+# Using class
+headings = soup.select(".heading")
+print(headings)
